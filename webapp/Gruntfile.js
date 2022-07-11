@@ -133,8 +133,20 @@ module.exports = function (grunt) {
                     'dist/css/vendor.css': ['dist/css/vendor.css']
                 }
             }
-        }
+        },
+        watch: {
+            scripts: {
+              files: ['**/*.js', '**/*.css', '**/*.html'],
+              tasks: ['dev'],
+              options: {
+                spawn: false,
+              },
+            },
+          },
     });
 
     grunt.registerTask('default', ['clean', 'concat', 'copy', 'ngAnnotate', 'uglify', 'cssmin']);
+    grunt.registerTask('dev', ['clean', 'concat', 'copy', 'ngAnnotate']);
+
+    grunt.loadNpmTasks('grunt-contrib-watch');
 };
