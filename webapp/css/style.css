@@ -42,7 +42,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #666;
-    background: #2d6588 url(../img/background.jpg) no-repeat fixed center center;
+    background: url(../img/bg.jpg) no-repeat fixed center center;
     background-size: cover;
 }
 
@@ -101,11 +101,8 @@ header {
 
 header h1 {
     margin-top: 0;
-    font-size: 72px;
-    font-weight: normal;
-    line-height: 1;
-    color: #FFFFFF;
-    letter-spacing: -1px;
+    background: transparent;
+    
 }
 
 header a:hover, header a:visited, header a:link, header a:active {
