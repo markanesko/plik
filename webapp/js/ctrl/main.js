@@ -471,6 +471,16 @@ plik.controller('MainCtrl', ['$scope', '$api', '$config', '$route', '$location',
             return getFileUrl("archive", $scope.upload.id, null, "archive.zip", dl);
         };
 
+
+        $scope.popupToast = function (dl) {
+            var toast = document.getElementById("snackbar");
+            // Add the "show" class to DIV
+            toast.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            
+        }
+        
         // Return QR Code image url
         $scope.getQrCodeUrl = function (url, size) {
             if (!url) return;
